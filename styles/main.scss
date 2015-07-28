@@ -1,0 +1,49 @@
+@import 'colors';
+@import 'nav';
+
+$h1-font: sans-serif;
+// border-radius is NOT a good example of a mixin. B-R is available in all browsers without prefixes.
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin red($opacity){
+	background-color: rgba(255, 0, 0, $opacity)
+}
+
+h1 { @include border-radius(10px);
+border: 10px solid $primary-color;
+color: $secondary-color;
+text-align: center; 
+font-family: $h1-font;}
+
+
+
+#svg{
+
+	margin: 0 auto;
+	display: block;
+	margin-top: 200px;
+	@include red(.1);
+	position: relative;
+}
+
+.test{
+	@include red(.1);
+	@include border-radius (10px);
+	border: 10px solid $primary-color;
+}
+//was trying to see if the @include directive would override the @extend directive. It does!
+
+.test1{
+	@extend .test;
+	@include red(.4);
+	
+
+
+
+}
+

@@ -1,0 +1,17 @@
+//this is an example of nesting
+
+nav{
+	text-transform: uppercase;
+}
+ul{ list-style-type: none;
+	float: right;
+	
+
+	li{
+		color: $primary-color;
+		display: inline-block;
+		margin:  0 10px;
+		font-family: sans-serif;
+	}
+}
+
