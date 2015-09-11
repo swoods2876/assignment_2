@@ -1,49 +1,464 @@
+@font-face {
+	font-family: painter;
+	src: url(SignPainter.otf);
+}
+
 @import 'colors';
-@import 'nav';
+@import 'ipad';
 
-$h1-font: sans-serif;
-// border-radius is NOT a good example of a mixin. B-R is available in all browsers without prefixes.
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+
+@media (min-width: 1025px){
+
+#Butchs{
+    width: 100%;
+	background: url(../large/imac.svg) no-repeat;
+	background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 52.26%;
+    background-color: white;
+	margin: 0;
 }
 
-@mixin red($opacity){
-	background-color: rgba(255, 0, 0, $opacity)
+body{
+  font-family: painter;
+  margin: 0 auto;
 }
 
-h1 { @include border-radius(10px);
-border: 10px solid $primary-color;
-color: $secondary-color;
-text-align: center; 
-font-family: $h1-font;}
+#storefront{
+	padding: 0; /* reset */
+    margin: 0;	
+}
 
+#carstn{
+	margin-top: 60px;
+	margin-left: 40px;
+}
 
+nav{
+	background-color: rgba(239,255,115, 0.7);
+	border: solid 1px rgb(85,27,32);
+	font-family: painter;
+	text-align: center;
+	vertical-align: middle;
+	position: fixed;
+	line-height: 90px;
+	width: 100%;
+	height: 100px;
+	margin-top:0px;
+	z-index: 1000;
+	display: none;
+}
 
-#svg{
+nav a{
+	text-decoration: none;	
+}
 
+nav li{
+	display: inline;
+	font-size: 40px;
+	margin: 0 30px;
+}
+
+nav ul{
+	display: inline;
+	vertical-align: top;
+	margin-top: 20px;
+}
+
+ nav h1{
+	margin-top: 0px;
+	font-family: painter; 
+}
+
+/*For the lightbox */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: none; 
+}
+
+#pic1 {
+  float: left;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  box-shadow: -5px 5px 5px 5px rgba(88, 26, 32, 0.7);
+  display: none; 
+}
+
+#pic1 img {
 	margin: 0 auto;
-	display: block;
-	margin-top: 200px;
-	@include red(.1);
-	position: relative;
+	box-shadow: -5px 5px 5px 5px rgba(88, 26, 32, 0.7);
 }
 
-.test{
-	@include red(.1);
-	@include border-radius (10px);
-	border: 10px solid $primary-color;
+.description {
+	position: fixed;
+	top: 50px;
+	right: 80px;
+	display: none;
 }
-//was trying to see if the @include directive would override the @extend directive. It does!
 
-.test1{
-	@extend .test;
-	@include red(.4);
-	
+.price {
+	position: fixed;
+	top: 150px;
+	right: 80px;
+	display: none;
+}
+
+.blurb {
+	position: fixed;
+	top: 250px;
+	right: 80px;
+	display: none;
+}
+
+#shoppingBtn{
+	position: fixed;
+	top: 450px;
+	right: 80px;
+	box-shadow: -1px 1px 1px 1px rgba(88, 26, 32, 0.7);
+	border-radius: 10%;
+	background: white;
+	color: red;
+	font-family: painter;
+	font-size: 20px;
+}
+
+.pictures {
+	width: 1100px;
+	margin:0 auto;
+
+	img{
+	padding: 20px;	
+	}
+
+	img:hover{
+	opacity: 0.6;
+	}
+}
+
+
+/*Contact Page*/
+#contact-button button{
+	box-shadow: -1px 1px 1px 1px rgba(88, 26, 32, 0.7);
+	border-radius: 10%;
+	background: white;
+	color: red;
+	width: 17%;
+	height: 7%;
+	font-family: painter;
+	font-size: 22px;
+}
+
+
+#contact-page{
+	font-family: painter;
+	font-size: 20px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#contact-title{
+	border: solid black 10px;
+	width: 100%;
+	height: 75px;
+}
+
+#contact-info {
+  text-align: center;
+}
+
+#contact-info a{
+	text-decoration: none;
+	color: red;
+}
+
+#contact-info li{
+	list-style: none;
+}
+
+#contact-info a:hover{
+	color: black;
+}
+
+form{
+	clear: both;
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 1%;
+    border: 1px solid #000;
+    margin-top: 5%;
+}
+
+label{
+	text-align: left;
+}
+
+#name{
+	width: 150px;
+	margin-top: 10px;
+}
+#mail{
+	width: 150px;
+	margin-top: 15px;
+}
+#msg{
+	width: 150px;
+	margin-top: 15px;
+}
+
+#msg textarea{
+	height: 100px;
+}
+
+#item{
+	width: 330px;
+	height: 330px;
+	border: dashed red 10px;
+}
+
+.misc {
+	float: left;
+}
+
+#fb{
+	position: fixed;
+	bottom: 70px;
+	right: 50px;
+}
+
+#tw{
+	position: fixed;
+	bottom: 30px;
+	right: 50px;
+}
+
+.misc{
+	float: left;
+}
+
+.shoppingList{
+	border: solid red 5px;
+}
+
+#basket{
+	position: fixed;
+	top: 125px;
+	right: 77px;
+	display: none; 
+}
+
+a {
+	color: red;
+}
+
+#toyHeader {
+	font-size: 40px;
+}
+
+// jacks page
+#jacky{
+  overflow: hidden;
+}
+
+#jack1{
+  width: 100%;
+  font-family: painter;
+  font-size: 75px;
+  position: absolute;
+  text-align: center;
+}
+
+#discount {
+  width: 100%;
+  margin-top: 100px;
+  font-family: painter;
+  font-size: 65px;
+  position: absolute;
+  text-align: center;
+  
+    z-index: 1; 
+}
+
+ #jack2{
+  font-family: painter;
+  font-size: 175px;
+  color: red;
+   
+     text-shadow:
+    -1px -1px 0 #00f,
+    1px -1px 0 #00f,
+    -1px 1px 0 #00f,
+    1px 1px 0 #00f;  
+    margin-left: 440px;
+    margin-top: 500px;
+  position: absolute;
+  z-index: 102;
+    text-align: center;
+  vertical-align: middle;
+}
+ #jack3{
+  font-family: painter;
+  font-size: 75px;
+  color: red;
+   
+     text-shadow:
+    -1px -1px 0 #00f,
+    1px -1px 0 #00f,
+    -1px 1px 0 #00f,
+    1px 1px 0 #00f;  
+    margin-left: 400px;
+    margin-top: 560px;
+  position: fixed;
+  z-index: 100;
+    text-align: center;
+  vertical-align: middle;
+  display: none;
+}
+
+#imglist{
+  width: 80%;
+    padding: 20px;
+    margin-top: 160px;
+    margin-bottom: 0px;
+  margin-left: 160px;
+    vertical-align: middle;
+  position:absolute;
+  z-index: 0;
+  
+}
+
+#whiteblock{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  margin-top: 500px;
+  z-index: 99;
+}
+
+#slider{
+    border: solid yellow 1px;
+  width: 284px;
+  height: 308px;
+  position: relative;
+  margin: 10px;
+  float: left;
+
+
+  
+  
+}
+
+#slider img{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    
+  top:0;
+
+
+  display: none;
+   
+}
+
+#slider1{
+     
+  width: 284px;
+  height: 308px;
+  position: relative;
+    float: left;
+    margin:10px;
+}
+
+#slider1 img{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    top:0;
+  display: none;
+}
+
+#slider2{
+  width: 284px;
+  height: 308px;
+  position: relative;
+  float: left;
+    margin:10px;
+}
+
+#slider2 img{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    top:0;
+  display: none;
+}
+
+#slider3{
+    
+  width: 284px;
+  height: 308px;
+  position: relative;
+  float: left;
+  margin: 10px;
+  
+  
+}
+
+#slider3 img{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    top:0;
+    display: none;
+   
+}
+
+#slider4{
+    border: solid black 1px;
+  width: 284px;
+  height: 308px;
+  position: relative;
+  float: left;
+  z-index:4;
+  margin: 10px;
+}
+
+#slider4 img{
+    width: 100%;
+  height: 100%;
+  position: absolute;
+    top:0;
+    display: none;
+}
+
+.pictures img{
+
+}
+
+.pictures img:hover{
+  opacity: 0.6;
+}
+
+
 
 
 
 }
+
+
+
 

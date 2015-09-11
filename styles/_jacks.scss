@@ -1,0 +1,175 @@
+#jack1{
+    width: 100%;
+    font-family: painter;
+    font-size: 75px;
+    position: absolute;
+    text-align: center;
+}
+
+#discount {
+    width: 100%;
+    margin-top: 100px;
+    font-family: painter;
+    font-size: 65px;
+    position: absolute;
+    text-align: center;
+    
+   z-index: 1; 
+}
+
+#jack2{
+    font-family: painter;
+    font-size: 175px;
+    color: red;
+     
+       text-shadow:
+   -1px -1px 0 #00f,
+   1px -1px 0 #00f,
+   -1px 1px 0 #00f,
+   1px 1px 0 #00f;  
+   margin-left: 440px;
+   margin-top: 500px;
+    position: absolute;
+    z-index: 102;
+   text-align: center;
+    vertical-align: middle;
+}
+#jack3{
+    font-family: painter;
+    font-size: 75px;
+    color: red;
+     
+       text-shadow:
+   -1px -1px 0 #00f,
+   1px -1px 0 #00f,
+   -1px 1px 0 #00f,
+   1px 1px 0 #00f;  
+   margin-left: 400px;
+   margin-top: 560px;
+    position: fixed;
+    z-index: 100;
+   text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+#imglist{
+    width: 80%;
+   padding: 20px;
+   margin-top: 160px;
+   margin-bottom: 0px;
+    margin-left: 160px;
+   vertical-align: middle;
+    position:absolute;
+    z-index: 0;
+    
+}
+
+#whiteblock{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    margin-top: 500px;
+    z-index: 99;
+}
+
+#slider{
+   border: solid yellow 1px;
+    width: 284px;
+    height: 308px;
+    position: relative;
+    margin: 10px;
+    float: left;
+
+
+    
+    
+}
+
+#slider img{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   
+    top:0;
+
+
+    display: none;
+     
+}
+
+#slider1{
+    
+    width: 284px;
+    height: 308px;
+    position: relative;
+   float: left;
+   margin:10px;
+}
+
+#slider1 img{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   top:0;
+    display: none;
+}
+
+#slider2{
+    width: 284px;
+    height: 308px;
+    position: relative;
+    float: left;
+   margin:10px;
+}
+
+#slider2 img{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   top:0;
+    display: none;
+}
+
+#slider3{
+   
+    width: 284px;
+    height: 308px;
+    position: relative;
+    float: left;
+    margin: 10px;
+    
+    
+}
+
+#slider3 img{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   top:0;
+   display: none;
+     
+}
+
+#slider4{
+   border: solid black 1px;
+    width: 284px;
+    height: 308px;
+    position: relative;
+    float: left;
+    z-index:4;
+    margin: 10px;
+}
+
+#slider4 img{
+   width: 100%;
+    height: 100%;
+    position: absolute;
+   top:0;
+   display: none;
+}
